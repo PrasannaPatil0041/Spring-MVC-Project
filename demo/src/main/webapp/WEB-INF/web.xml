@@ -4,4 +4,16 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+
+  <servlet>
+     <servlet-name>spring</servlet-name>
+     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+     <servlet-name>spring</servlet-name>
+     <!-- The url pattern all the reqest starting from / from now -->
+     <!--This means it will take every reqest-->
+     <url-pattern>/</url-pattern>
+  </servlet-mapping>
 </web-app>
