@@ -12,6 +12,7 @@
 
   <servlet-mapping>
      <servlet-name>spring</servlet-name>
+     <!-- Create the servlet_name-sevlet.xml file in webINF to teel this DispatcherServlet about ithe all the controlleer and viewresolver bean -->
      <!-- The url pattern all the reqest starting from / from now -->
      <!--This means it will take every reqest-->
      <url-pattern>/</url-pattern>
