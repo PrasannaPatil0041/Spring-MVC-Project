@@ -86,6 +86,7 @@
 </head>
 <body>
 
+  <%String name=(String)request.getAttribute("name")%>
   <h1>Feedback Page - Prasanna Patil</h1>
 
   <div class="feedback-form">

@@ -110,7 +110,7 @@
         <ul>
             <li><a href="/demo/home">Home</a></li>
             <li><a href="/demo/about">About</a></li>
-            <li><a href="/demo/register">Register</a></li>
+            <li><a href="/demo/feedback">Feedback</a></li>
             <li><a href="/demo/contact">Contact Us</a></li>
         </ul>
     </nav>

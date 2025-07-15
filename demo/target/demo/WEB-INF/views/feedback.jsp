@@ -90,7 +90,7 @@
   <h1>Feedback Page - <%=name%></h1>
 
   <div class="feedback-form">
-    <form id="feedbackForm">
+    <form id="feedbackForm" action="servlet41" method="POST" >
       <label for="feedback">Your Feedback:</label>
       <textarea id="feedback" name="feedback" rows="5" placeholder="Enter your feedback here..." required></textarea>
 
@@ -129,10 +129,10 @@
     updateDateTime();
 
     // Handle form submission
-    document.getElementById("feedbackForm").addEventListener("submit", function(event) {
-      event.preventDefault(); // prevent page reload
-      document.getElementById("thankYouModal").style.display = "flex"; // show modal
-    });
+    //document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+    //  event.preventDefault(); // prevent page reload
+    //  document.getElementById("thankYouModal").style.display = "flex"; // show modal
+    //});
 
     function refreshPage() {
       location.reload();
