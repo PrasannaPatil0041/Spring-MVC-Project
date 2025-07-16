@@ -33,7 +33,11 @@ public class ControllerServlet {
     public String about(){
         return "about";
     }
-     
+
+    @RequestMapping("/register")
+     public String register(){
+        return "register";
+     }
     //If we use ModelAndView as data transfering process
     //We have to return the ModelAndView object
     @RequestMapping("/feedback")

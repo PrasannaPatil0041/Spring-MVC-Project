@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@page isELIgnored="false"%>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -86,8 +87,10 @@
 </head>
 <body>
 
-  <%String name= (String)request.getAttribute("name");%>
-  <h1>Feedback Page - <%=name%></h1>
+  <!-- <%String name= (String)request.getAttribute("name");%> -->
+   <!-- In below line we used expression language to fetch the name 
+   amd also make the isELIgnored="false" at up  -->
+  <h1>Feedback Page - ${name}</h1>
 
   <div class="feedback-form">
     <form id="feedbackForm" action="servlet41" method="POST" >
