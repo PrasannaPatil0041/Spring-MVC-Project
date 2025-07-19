@@ -1,10 +1,12 @@
 package com.spring.dataConnection;
 
+
+
 public class User {
     private String name;
     private String phone;
     private String address;
-
+    
     public User(String address, String name, String phone) {
         this.address = address;
         this.name = name;

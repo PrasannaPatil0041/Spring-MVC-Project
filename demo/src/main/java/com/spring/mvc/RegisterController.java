@@ -1,12 +1,18 @@
 package com.spring.mvc;
 
+import java.util.Random;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.spring.dataConnection.User;
+import com.spring.hibernate.ServiceUser;
+import com.spring.hibernate.UserNeww;
+
+import jakarta.servlet.http.HttpServletRequest;
 
 
 //@RequestMapping("/regCtr")
@@ -15,7 +21,8 @@ import com.spring.dataConnection.User;
 //y0u have to write like  [/demo/regCtr/dataTransfer]
 @Controller
 public class RegisterController {
-    
+    @Autowired
+     private ServiceUser su;
     //Mapping use on Handler method 
     // @RequestMapping(path="/dataTransfer", method=RequestMethod.POST)
     // public String dataTransfer(@RequestParam("name") String name,@RequestParam("phone") String phone,@RequestParam("address") String address, Model model){
@@ -33,11 +40,18 @@ public class RegisterController {
     }
 
     @RequestMapping(path="/dataTransfer", method=RequestMethod.POST)
-    public String dataTransfer(@ModelAttribute User user, Model model){
+    public String dataTransfer(HttpServletRequest req, Model model){
         //user get automatically be put in the model
         // model.addAttribute("header", "Portal Registration");
         // model.addAttribute("desc","Abovw deatils are given by the user to our portal");
-        
+        Random rand = new Random();
+
+        //int randomInt = rand.nextInt(); // any int value
+        int r1 = rand.nextInt(100000);
+        UserNeww user1=new UserNeww(r1, (String)req.getParameter("name"), (String)req.getParameter("phone"),(String)req.getParameter("address"));
+        model.addAttribute("user",user1);
+        System.out.println(user1);
+        su.Serviceinsert(user1);
         return "dataTransfer";
     }
 }
