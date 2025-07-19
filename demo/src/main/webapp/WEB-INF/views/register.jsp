@@ -73,7 +73,7 @@
             margin-right: 5px;
         }
 
-        input[type="submit"] {
+        button[type="submit"] {
             background-color: #4a90e2;
             color: white;
             padding: 12px;
@@ -86,7 +86,7 @@
             transition: background-color 0.3s ease;
         }
 
-        input[type="submit"]:hover {
+        button[type="submit"]:hover {
             background-color: #3b7dc3;
         }
 
@@ -100,7 +100,7 @@
 </head>
 <body>
 
-<form action="register" method="POST">
+<form action="/demo/dataTransfer" method="POST">
     <h2>Registration Form</h2>
 
     <label for="name">Full Name:</label>
@@ -130,7 +130,7 @@
     <label for="password">Password:</label>
     <input type="password" id="password" name="password" required>
 
-    <input type="submit" value="Register">
+    <button type="submit">Register</button>
 </form>
 
 </body>
